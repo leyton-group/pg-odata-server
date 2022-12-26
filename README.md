@@ -31,7 +31,7 @@ DB_DATABASE='db_name'
 
 By default, the app will listen on `port` `3003`.
 
-You may customize the server port options by editing [.env](http://gitlab.leyton.fr/salesforce/ODATA/-/blob/server/.env#L1-L2).
+You may customize the server port options by editing [.env](https://github.com/leyton-group/pg-odata-server/blob/develop/.env#L1-L2).
 
 By default, these are the options:
 
@@ -61,4 +61,9 @@ npm start
 
 ### Creating sample data
 
-After starting the application it's will generate the sample [datasets](http://gitlab.leyton.fr/salesforce/ODATA/-/blob/server/src/server.ts#L13-L35).
+After starting the application you can generate the sample data by submitting localhost:3003/initDb.
+
+
+### Adding new models/controllers
+
+You can create and expose new tables through Odata protocole using the instructions given on [ts-odata-v4-server](https://github.com/leyton-group/ts-odata-v4-server) project readme
