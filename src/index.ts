@@ -1,5 +1,5 @@
 import { Server } from "./server";
-import Schema = require("./utils/Schema");
+import Schema = require("./utils/schema");
 require("dotenv").config();
 
 // Start ODATA server
@@ -10,4 +10,3 @@ export default Server.create("/odata", port).addListener("listening", () => {
 });
 // Init test data
 Server.execute("/initDb", "POST");
-
