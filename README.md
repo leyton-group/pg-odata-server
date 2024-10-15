@@ -128,7 +128,7 @@ require("dotenv").config();
 // Setup metadata schema
 Server.$metadata(your_schema_file);
 // Start ODATA server
-const port = parseInt(process.env.PORT, 10) || 3000;
+const port = parseInt(process.env.PORT, 10) || 3003;
 Server.create("/odata", port).addListener("listening", () => {
   console.log(`Odata server listening on port ${port} 🚀`);
 });
@@ -136,13 +136,13 @@ Server.create("/odata", port).addListener("listening", () => {
 
 ### Response example
 
-**Path :** `http://localhost:3000/odata/Categories`
+**Path :** `http://localhost:3003/odata/Categories`
 
 **Method :** `GET`
 
 ```json
 {
-  "@odata.context": "http://localhost:3000/odata/$metadata#Categories",
+  "@odata.context": "http://localhost:3003/odata/$metadata#Categories",
   "value": [
     {
       "Id": 1,
